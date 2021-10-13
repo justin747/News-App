@@ -59,6 +59,7 @@
 		3BC547A426DAE51800AB6EB7 /* News App */ = {
 			isa = PBXGroup;
 			children = (
+				3BEA6385271686410070574A /* Model */,
 				3B1AC1B126DC8F5500DDBD72 /* Views */,
 				3BC547A526DAE51800AB6EB7 /* News_AppApp.swift */,
 				3BC547A926DAE51D00AB6EB7 /* Assets.xcassets */,
@@ -73,6 +74,13 @@
 				3BC547AC26DAE51D00AB6EB7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3BEA6385271686410070574A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
