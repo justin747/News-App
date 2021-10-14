@@ -8,9 +8,10 @@
 import Foundation
 
 protocol APIBuilder {
-    var urlRequest: URLRequest { get }
     var baseUrl: URL { get }
     var path: String { get }
+    var urlRequest: URLRequest { get }
+
 }
 
 enum NewsAPI {
