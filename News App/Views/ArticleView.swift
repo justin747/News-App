@@ -7,15 +7,39 @@
 
 import SwiftUI
 import URLImage
+import URLImageStore
 
 struct ArticleView: View {
+    let article: Article
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            
+            if let imgUrl = article.image, let url = URL(string: imgUrl) {
+                
+                URLImage(url: url,
+                         options: URLImageOptions(indentifier: article.id.uuid,
+                            cachePolicy: .returnStoreElseLoad(downloadDelay: 0.25)
+                         ),
+                         content: { image in
+                    
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                    
+                })
+                
+            } else {
+                
+            }
+            
+        }
     }
 }
 
 struct ArticleView_Previews: PreviewProvider {
     static var previews: some View {
-        ArticleView()
+        ArticleView(article: Article.dummyData)
     }
 }
